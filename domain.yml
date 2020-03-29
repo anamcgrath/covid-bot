@@ -1,0 +1,4 @@
+intents:
+- greeting
+actions:
+- utter_greeting
