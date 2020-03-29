@@ -1,0 +1,29 @@
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+- name: EntitySynonymMapper
+- name: ResponseSelector
+language: en
+policies:
+- name: AugmentedMemoizationPolicy
+  max_history: 2
+- name: MappingPolicy
+- name: TEDPolicy
+  batch_size:
+  - 32
+  - 64
+  batch_strategy: sequence
+  max_history: 3
+  epochs: 50
+  evaluate_every_number_of_epochs: 50
+- name: FallbackPolicy
+  nlu_threshold: 0.1
+  core_threshold: 0.1
+  fallback_action_name: utter_defaultFallback
