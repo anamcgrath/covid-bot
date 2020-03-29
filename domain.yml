@@ -1,4 +1,13 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
 intents:
 - greeting
+responses:
+  utter_greeting:
+  - text: well hello there!
+  utter_confused:
+  - text: Sorry, I don't understand.
 actions:
 - utter_greeting
+- utter_confused

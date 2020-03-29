@@ -1,5 +1,7 @@
+language: en
 pipeline:
-- name: WhitespaceTokenizer
+- name: ConveRTTokenizer
+- name: ConveRTFeaturizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
@@ -8,22 +10,20 @@ pipeline:
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
+  epochs: 100
 - name: EntitySynonymMapper
 - name: ResponseSelector
-language: en
+  epochs: 100
 policies:
-- name: AugmentedMemoizationPolicy
-  max_history: 2
-- name: MappingPolicy
-- name: TEDPolicy
-  batch_size:
-  - 32
-  - 64
-  batch_strategy: sequence
-  max_history: 3
-  epochs: 50
-  evaluate_every_number_of_epochs: 50
+- name: KerasPolicy
+  featurizer:
+  - name: MaxHistoryTrackerFeaturizer
+    max_history: 5
+    state_featurizer:
+    - name: BinarySingleStateFeaturizer
+- name: MemoizationPolicy
+  max_history: 5
 - name: FallbackPolicy
-  nlu_threshold: 0.1
-  core_threshold: 0.1
-  fallback_action_name: utter_defaultFallback
+  nlu_threshold: 0.4
+  core_threshold: 0.3
+  fallback_action_name: utter_confused
