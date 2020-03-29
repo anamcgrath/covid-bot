@@ -3,11 +3,22 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greeting
+- positive
+- negative
 responses:
   utter_greeting:
   - text: well hello there!
   utter_confused:
   - text: Sorry, I don't understand.
+  utter_askHowAreYou:
+  - text: How are you doing today?
+  utter_negative:
+  - text: Oh no, that's terrible!
+  utter_positive:
+  - text: I'm so glad!
 actions:
 - utter_greeting
 - utter_confused
+- utter_askHowAreYou
+- utter_negative
+- utter_positive
