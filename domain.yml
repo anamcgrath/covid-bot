@@ -7,6 +7,7 @@ intents:
 - negative
 - call911
 - affirmative
+- default_fallback
 responses:
   utter_greeting:
   - text: Hello!
@@ -38,6 +39,74 @@ responses:
   utter_call911_2:
   - text: These symptoms require immediate attention. You should call 9-1-1 **immediately**
       or go directly to your nearest emergency department.
+  utter_symptom_2:
+  - text: "Are you experiencing any of the following?\n- Mild to moderate **shortness\
+      \ of breath**\n- Inability to lie down because of **difficulty breathing**\n\
+      - **Chronic health conditions** that you are having difficulty managing because\
+      \ of difficulty breathing"
+    buttons:
+    - title: Yes
+      payload: /
+    - title: No
+      payload: /
+  utter_consultDoctor:
+  - text: '**Please consult your family doctor.**'
+  utter_consultDoctor_2:
+  - text: If you are unable to reach your regular health care provider, call 8-1-1
+      to speak with HealthLink BC. A nurse at HealthLink BC can speak with you about
+      your symptoms and provide health advice.
+  utter_symptom_3:
+  - text: "Are you experiencing any of the following?\n- Fever\n- Cough\n- Sneezing\n\
+      - Sore throat"
+    buttons:
+    - title: Yes
+      payload: /
+    - title: No
+      payload: /
+  utter_stayHome:
+  - text: '** Please stay at home.** As a precaution, the Ministry of Health is asking
+      anyone with symptoms (fever, cough, sneezing, or sore throat) to stay home for
+      10 days.'
+  utter_stayHome_2:
+  - text: If your symptoms worsen, call your family physician. If you are unable to
+      reach your regular health care provider, call 8-1-1 to speak with HealthLink
+      BC.
+  utter_travel:
+  - text: Did you develop symptoms within 14 days of travel outside Canada?
+    buttons:
+    - title: Yes
+      payload: /
+    - title: No
+      payload: /
+  utter_selfIsolate14:
+  - text: "** Please self-isolate for 14 days. **  Since you don't have symptoms,\
+      \ you do not need testing for COVID-19 at this time."
+  utter_selfIsolate14_2:
+  - text: Since you have been exposed in the last 14 days, you should self-monitor
+      for any symptoms (fever, cough, sneezing, sore throat, or difficulty breathing).
+  utter_selfIsolate_3:
+  - text: If you begin to develop any of these, you should take the questionnaire
+      again.
+  utter_provideCare:
+  - text: Did you provide care or have close contact with a person with COVID-19 (probable
+      or confirmed) while they were ill (cough, fever, sneezing, or sore throat)?
+    buttons:
+    - title: Yes
+      payload: /
+    - title: No
+      payload: /
+  utter_selfIsolate10:
+  - text: '**Please self-isolate for 10 days.** If your symptoms worsen, please check
+      back in.'
+  utter_selfIsolate10_2:
+  - text: "**Please do not: **\n \n   - go to any public places\n   - have any visitors\n\
+      \   - share personal items \n   - go to an emergency department\n   - go to\
+      \ family doctor or walk-in clinic **unless your symptoms worsen.**"
+  utter_selfIsolate10_3:
+  - text: "** Please do: **\n- Stay at home\n- wash your hands often\n- call ahead\
+      \ to doctors to explain your recent health history"
+  utter_selfIsolate10_4:
+  - text: http://www.bccdc.ca/health-info/diseases-conditions/covid-19
 actions:
 - utter_greeting
 - utter_confused
@@ -50,3 +119,18 @@ actions:
 - utter_symptom1
 - utter_call911
 - utter_call911_2
+- utter_symptom_2
+- utter_consultDoctor
+- utter_consultDoctor_2
+- utter_symptom_3
+- utter_stayHome
+- utter_stayHome_2
+- utter_travel
+- utter_selfIsolate14
+- utter_selfIsolate14_2
+- utter_selfIsolate_3
+- utter_provideCare
+- utter_selfIsolate10
+- utter_selfIsolate10_2
+- utter_selfIsolate10_3
+- utter_selfIsolate10_4
