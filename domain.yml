@@ -8,6 +8,8 @@ intents:
 - call911
 - affirmative
 - default_fallback
+- takeTest
+- /
 responses:
   utter_greeting:
   - text: Hello!
@@ -20,7 +22,6 @@ responses:
   - text: Would you like to take the quick COVID-19 questionaire?
     buttons:
     - title: Yes, Please!
-      payload: /call911
     - title: No, thank you
   utter_noTest:
   - text: No problem! You can take this questionaire anytime. Feel free to say "hi"
@@ -92,9 +93,9 @@ responses:
       or confirmed) while they were ill (cough, fever, sneezing, or sore throat)?
     buttons:
     - title: Yes
-      payload: /
+      payload: Yes
     - title: No
-      payload: /
+      payload: No
   utter_selfIsolate10:
   - text: '**Please self-isolate for 10 days.** If your symptoms worsen, please check
       back in.'
@@ -106,7 +107,24 @@ responses:
   - text: "** Please do: **\n- Stay at home\n- wash your hands often\n- call ahead\
       \ to doctors to explain your recent health history"
   utter_selfIsolate10_4:
-  - text: http://www.bccdc.ca/health-info/diseases-conditions/covid-19
+  - text: (http://www.bccdc.ca/health-info/diseases-conditions/covid-19)[BC Health
+      Services]
+  utter_closeContact:
+  - text: Did you have **close contact** with a person who travelled outside of Canada
+      in the last 14 days who has become ill (cough, fever, sneezing, or sore throat)?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_noCovid:
+  - text: Since you don’t have any COVID-19 symptoms, you don’t need to be tested
+      for COVID-19.
+  utter_noCovid_2:
+  - text: Please self-monitor, wash your hands frequently, and practice physical distancing.
+  utter_noCovid_3:
+  - text: If you develop any symptoms or become aware of any potential exposures to
+      cases of COVID-19, take this self-assessment again.
 actions:
 - utter_greeting
 - utter_confused
@@ -134,3 +152,7 @@ actions:
 - utter_selfIsolate10_2
 - utter_selfIsolate10_3
 - utter_selfIsolate10_4
+- utter_closeContact
+- utter_noCovid
+- utter_noCovid_2
+- utter_noCovid_3

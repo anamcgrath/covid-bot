@@ -35,3 +35,14 @@
   - utter_q6
 * negative
   - utter_stayHome
+
+## New Story
+
+* greeting
+    - utter_greeting
+    - utter_introduction
+    - utter_startTest
+* takeTest
+    - utter_symptom1
+* /
+    - utter_confused
