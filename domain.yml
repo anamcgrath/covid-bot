@@ -5,20 +5,48 @@ intents:
 - greeting
 - positive
 - negative
+- call911
+- affirmative
 responses:
   utter_greeting:
-  - text: well hello there!
+  - text: Hello!
   utter_confused:
   - text: Sorry, I don't understand.
-  utter_askHowAreYou:
-  - text: How are you doing today?
-  utter_negative:
-  - text: Oh no, that's terrible!
-  utter_positive:
-  - text: I'm so glad!
+  utter_introduction:
+  - text: I am a COVID-19 symptom checker chatbot. I can help you decide what actions
+      you should take depending on your unique situation.
+  utter_startTest:
+  - text: Would you like to take the quick COVID-19 questionaire?
+    buttons:
+    - title: Yes, Please!
+      payload: /call911
+    - title: No, thank you
+  utter_noTest:
+  - text: No problem! You can take this questionaire anytime. Feel free to say "hi"
+      whenever you need me :)
+  utter_symptom1:
+  - text: "Are you experiencing any of the following?\n- Severe difficulty breathing\
+      \ (e.g. struggling to breathe or speaking in single words)\n- Severe chest pain\n\
+      - Having a very hard time waking up\n- Feeling confused\n- Losing consciousness"
+    buttons:
+    - title: Yes
+      payload: /
+    - title: No
+      payload: /
+  utter_call911:
+  - text: '**Please call 9-1-1 or go directly to your nearest emergency department.**'
+  utter_call911_2:
+  - text: These symptoms require immediate attention. You should call 9-1-1 **immediately**
+      or go directly to your nearest emergency department.
 actions:
 - utter_greeting
 - utter_confused
 - utter_askHowAreYou
 - utter_negative
 - utter_positive
+- utter_introduction
+- utter_startTest
+- utter_noTest
+- utter_symptom1
+- utter_call911
+- utter_call911_2

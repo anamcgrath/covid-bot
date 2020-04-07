@@ -3,6 +3,8 @@
 - hi
 - hello
 - hello?
+- yes
+- hey
 
 ## intent:negative
 - not so good
