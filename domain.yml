@@ -5,11 +5,8 @@ intents:
 - greeting
 - positive
 - negative
-- call911
-- affirmative
-- default_fallback
-- takeTest
-- /
+- no
+- yes
 responses:
   utter_greeting:
   - text: Hello!
@@ -128,9 +125,6 @@ responses:
 actions:
 - utter_greeting
 - utter_confused
-- utter_askHowAreYou
-- utter_negative
-- utter_positive
 - utter_introduction
 - utter_startTest
 - utter_noTest
