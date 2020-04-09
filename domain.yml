@@ -11,8 +11,8 @@ responses:
   utter_confused:
   - text: Sorry, I don't understand.
   utter_introduction:
-  - text: I am a COVID-19 symptom checker chatbot. I can help you decide what actions
-      you should take depending on your unique situation.
+  - text: I am a COVID-19 symptom checker chatbot! Use the questionnaire to know what
+      action you should take.
   utter_startTest:
   - text: Would you like to take the quick COVID-19 questionaire?
     buttons:

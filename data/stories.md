@@ -143,10 +143,10 @@
   - utter_travel
 * no
   - utter_provideCare
- * no 
-   - utter_closeContact
- * no
-   - utter_selfIsolate10
-   - utter_selfIsolate10_2
-   - utter_selfIsolate10_3
-   - utter_selfIsolate10_4
+* no 
+  - utter_closeContact
+* no
+  - utter_selfIsolate10
+  - utter_selfIsolate10_2
+  - utter_selfIsolate10_3
+  - utter_selfIsolate10_4
