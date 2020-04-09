@@ -14,18 +14,6 @@
 - PLEASE
 - yes pls
 
-## intent:negative
-- not so good
-- terrible
-- utter_introduction
-
-## intent:positive
-- great!
-- good
-- I'm good
-- doing good
-- great
-
 ## intent:no
 - NO
 - NOPE

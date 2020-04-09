@@ -4,14 +4,6 @@
   - utter_introduction
   - utter_startTest
 
-## Good
-* positive
-  - utter_positive
-
-## Bad
-* negative
-  - utter_negative
-
 ## Path1 - No Test
 
 * greeting
@@ -62,7 +54,7 @@
 * yes 
   - utter_selfIsolate14
   - utter_selfIsolate14_2
-  - utter_selfIsolate14_3
+  - utter_selfIsolate_3
 
 ## Path5 - selfIsolate10
 * greeting
