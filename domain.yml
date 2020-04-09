@@ -29,9 +29,9 @@ responses:
       - Having a very hard time waking up\n- Feeling confused\n- Losing consciousness"
     buttons:
     - title: Yes
-      payload: /
+      payload: /yes
     - title: No
-      payload: /
+      payload: /no
   utter_call911:
   - text: '**Please call 9-1-1 or go directly to your nearest emergency department.**'
   utter_call911_2:
@@ -44,9 +44,9 @@ responses:
       \ of difficulty breathing"
     buttons:
     - title: Yes
-      payload: /
+      payload: /yes
     - title: No
-      payload: /
+      payload: /no
   utter_consultDoctor:
   - text: '**Please consult your family doctor.**'
   utter_consultDoctor_2:
@@ -58,9 +58,9 @@ responses:
       - Sore throat"
     buttons:
     - title: Yes
-      payload: /
+      payload: /yes
     - title: No
-      payload: /
+      payload: /no
   utter_stayHome:
   - text: '** Please stay at home.** As a precaution, the Ministry of Health is asking
       anyone with symptoms (fever, cough, sneezing, or sore throat) to stay home for
@@ -73,9 +73,9 @@ responses:
   - text: Did you develop symptoms within 14 days of travel outside Canada?
     buttons:
     - title: Yes
-      payload: /
+      payload: /yes
     - title: No
-      payload: /
+      payload: /no
   utter_selfIsolate14:
   - text: "** Please self-isolate for 14 days. **  Since you don't have symptoms,\
       \ you do not need testing for COVID-19 at this time."
