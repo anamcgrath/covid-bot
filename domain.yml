@@ -5,6 +5,9 @@ intents:
 - greeting
 - no
 - yes
+- get_started
+- start_test
+- no_test
 responses:
   utter_greeting:
   - text: Hello!
@@ -17,9 +20,9 @@ responses:
   - text: Would you like to take the quick COVID-19 questionaire?
     buttons:
     - title: Yes, Please!
-      payload: /yes
+      payload: /start_test
     - title: No, thank you
-      payload: /no
+      payload: /no_test
   utter_noTest:
   - text: No problem! You can take this questionaire anytime. Feel free to say "hi"
       whenever you need me :)
@@ -39,7 +42,7 @@ responses:
       or go directly to your nearest emergency department.
     buttons:
     - title: Start Over
-      payload: /greeting 
+      payload: /greeting
   utter_symptom_2:
   - text: "Are you experiencing any of the following?\n- Mild to moderate **shortness\
       \ of breath**\n- Inability to lie down because of **difficulty breathing**\n\
@@ -58,7 +61,7 @@ responses:
       your symptoms and provide health advice.
     buttons:
     - title: Start Over
-      payload: /greeting   
+      payload: /greeting
   utter_symptom_3:
   - text: "Are you experiencing any of the following?\n- Fever\n- Cough\n- Sneezing\n\
       - Sore throat"
@@ -73,7 +76,7 @@ responses:
       10 days.'
     buttons:
     - title: Start Over
-      payload: /greeting  
+      payload: /greeting
   utter_stayHome_2:
   - text: If your symptoms worsen, call your family physician. If you are unable to
       reach your regular health care provider, call 8-1-1 to speak with HealthLink
@@ -96,7 +99,7 @@ responses:
       again.
     buttons:
     - title: Start Over
-      payload: /greeting   
+      payload: /greeting
   utter_provideCare:
   - text: Did you provide care or have close contact with a person with COVID-19 (probable
       or confirmed) while they were ill (cough, fever, sneezing, or sore throat)?
@@ -116,10 +119,10 @@ responses:
   - text: "** Please do: **\n- Stay at home\n- wash your hands often\n- call ahead\
       \ to doctors to explain your recent health history"
   utter_selfIsolate10_4:
-  - text: 'For more information, go to BC Health Services [website](http://www.bccdc.ca/health-info/diseases-conditions/covid-19)'
+  - text: For more information, go to BC Health Services [website](http://www.bccdc.ca/health-info/diseases-conditions/covid-19)
     buttons:
     - title: Start Over
-      payload: /greeting 
+      payload: /greeting
   utter_closeContact:
   - text: Did you have **close contact** with a person who travelled outside of Canada
       in the last 14 days who has become ill (cough, fever, sneezing, or sore throat)?
@@ -138,7 +141,7 @@ responses:
       cases of COVID-19, take this self-assessment again.
     buttons:
     - title: Start Over
-      payload: /greeting   
+      payload: /greeting
 actions:
 - utter_greeting
 - utter_confused
