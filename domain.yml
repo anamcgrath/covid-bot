@@ -8,6 +8,7 @@ intents:
 - get_started
 - start_test
 - no_test
+- start_over
 responses:
   utter_greeting:
   - text: Hello!
@@ -142,6 +143,8 @@ responses:
     buttons:
     - title: Start Over
       payload: /start_over
+  utter_new:
+  - text: New text message
 actions:
 - utter_greeting
 - utter_confused
@@ -170,3 +173,4 @@ actions:
 - utter_noCovid
 - utter_noCovid_2
 - utter_noCovid_3
+- utter_new
