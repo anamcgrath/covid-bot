@@ -22,6 +22,7 @@
   - utter_symptom_2
 * yes
   - utter_consultDoctor
+  - utter_consultDoctor_2
 
 ## Path4 - selfIsolate14
 * start_test
@@ -128,5 +129,5 @@
 * start_over
   - utter_greeting
   - utter_introduction
-  - utter_ startTest
+  - utter_startTest
   - action_session_start
